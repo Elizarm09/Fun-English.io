@@ -29,7 +29,7 @@
 
         <!-- Subtabs -->
         <nav class="subtabs" role="tablist">
-          <button class="subtab-button" onclick="openSubTab(event, 'b1-listening')" role="tab" aria-selected="false">Listening</button>
+          <button class="subtab-button" onclick="openSubTab(event, 'b1-listening')" role="tab" aria-selected="true">Listening</button>
           <button class="subtab-button" onclick="openSubTab(event, 'b1-grammar')" role="tab" aria-selected="false">Grammar</button>
           <button class="subtab-button" onclick="openSubTab(event, 'b1-speaking')" role="tab" aria-selected="false">Speaking</button>
           <button class="subtab-button" onclick="openSubTab(event, 'b1-reading')" role="tab" aria-selected="false">Reading</button>
@@ -222,26 +222,26 @@
   <button class="retry-btn" style="display:none;">🔄 Try again</button>
   <p class="message-result" style="font-weight:bold; margin-top:10px;"></p>
 </article> 
-</section> 
-
- </div>
-      <!-- Speaking -->
-  <section id="b1-speaking" class="subtab-content" style="display: none;">
-  <h3>🗣️ Speaking Section</h3>
-  <div id="speaking-exercise">
-    <article class="activity-card">
-    <p><strong>Say aloud:</strong> <span id="fraseObjetivo">"Excuse me, could you help me?"</span></p>
-    <button id="speakBtn">🎤 Speak</button>
-    <button id="repeatPhraseBtn">🔊 Listen</button>
-    <p id="resultado"></p>
-    <p id="mensajeError" class="error-message hidden">❌ Incorrect. Try again.</p>
-    <button id="retryBtn" class="hidden">🔄 Retry</button>
-    <p class="message-result"></p>
-    <button id="nextBtn">➡️ Next</button>
-    </article>
-    
-  </div>
 </section>
+
+          <!-- Speaking -->  
+
+<section id="b1-speaking" class="subtab-content" style="display: none;">
+    <h3>🗣️ Speaking Section</h3>
+    <div id="speaking-exercise">
+      <article class="activity-card">
+        <p><strong>Say aloud:</strong> <span id="fraseObjetivo">"Excuse me, could you help me?"</span></p>
+        <button id="speakBtn">🎤 Speak</button>
+        <button id="repeatPhraseBtn">🔊 Listen</button>
+        <p id="resultado"></p>
+        <p id="mensajeError" class="error-message hidden">❌ Incorrect. Try again.</p>
+        <button id="retryBtn" class="hidden">🔄 Retry</button>
+        <p class="message-result"></p>
+        <button id="nextBtn">➡️ Next</button>
+      </article>
+    </div>
+  </section>
+
 
         <!-- Reading -->
         <section id="b1-reading" class="subtab-content" style="display: none;">
@@ -300,7 +300,7 @@
             <button class="retry-btn" onclick="resetCard(this)" style="display: none;">🔄 Try Again</button>
           </article>
         </section>
-
+</section>
         <!-- B1+ TAB -->
       <section id="b1plus" class="tab-content" style="display: none;" role="tabpanel">
         <h2>Level B1+</h2>
@@ -317,6 +317,13 @@
     </main>
   </div>
 
+  <footer>
+  <h5>&copy; Mahanaym 2025 By Elizabeth Román</h5>
+</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
   <footer>
   <h5>&copy; Mahanaym 2025 By Elizabeth Román</h5>
 </footer>
