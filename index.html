@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <h1>User Register</h1>
+    <form id="register-form">
+      <label for="role">I am:</label>
+      <select id="role" required>
+        <option value="">Choose</option>
+        <option value="estudiante">Student</option>
+        <option value="docente">Teacher</option>
+      </select>
+
+      <div id="common-fields">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required />
+      </div>
+
+      <div id="student-fields" class="hidden">
+        <label for="course">Course:</label>
+        <input type="text" id="course" required />
+
+        <label for="level">Level:</label>
+        <select id="level">
+          <option value="">Choose</option>
+          <option value="B1">B1</option>
+          <option value="B1+">B1+</option>
+          <option value="B2">B2</option>
+        </select>
+      </div>
+
+      <div id="teacher-fields" class="hidden">
+        <label for="username">Username:</label>
+        <input type="text" id="username" />
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" />
+      </div>
+
+      <button type="submit">Continue</button>
+    </form>
+
+    <div id="student-list-section" class="hidden">
+      <h2>Registered Students</h2>
+      <div id="student-list"></div>
+      <button onclick="borrarEstudiantes()">🗑️ Delete all the students</button>
+
+       <button id="cerrar-btn" class="cerrar-sesion-btn">🔓 Log out</button>
+
+    </div>
+  </div>
+
+
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,240 @@
+/* Basic Reset  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', Arial, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  color: #333;
+  overflow-y: auto;
+}
+
+/* Main holder */
+.container {
+  background: #fff;
+  width: 100%;
+  max-width: 480px;
+  border-radius: 24px;
+  padding: 40px 50px;
+  box-shadow:
+    0 10px 30px rgba(102, 126, 234, 0.3),
+    0 4px 10px rgba(118, 75, 162, 0.3);
+  text-align: center;
+  animation: fadeInUp 0.8s ease forwards;
+  position: relative;
+}
+
+/* Animación para entrada */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Titulos */
+h1, h2 {
+  font-weight: 700;
+  color: #4a4a4a;
+  margin-bottom: 30px;
+  letter-spacing: 0.04em;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+}
+
+/* Formularios */
+form {
+  text-align: left;
+}
+
+/* Labels */
+form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #555;
+  letter-spacing: 0.03em;
+  user-select: none;
+}
+
+/* Inputs y selects */
+input[type="text"],
+input[type="password"],
+select {
+  width: 100%;
+  padding: 14px 18px;
+  border: 2px solid #ddd;
+  border-radius: 14px;
+  font-size: 16px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  margin-bottom: 24px;
+  font-family: inherit;
+  outline-offset: 2px;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.06);
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+select:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 10px rgba(102, 126, 234, 0.6);
+}
+
+/* Botón general */
+button {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  user-select: none;
+  box-shadow:
+    0 6px 15px rgba(102, 126, 234, 0.4),
+    0 2px 6px rgba(118, 75, 162, 0.3);
+  transition:
+    background 0.4s ease,
+    box-shadow 0.3s ease,
+    transform 0.15s ease;
+  letter-spacing: 0.04em;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #5a67d8, #643bb9);
+  box-shadow:
+    0 8px 20px rgba(90, 103, 216, 0.6),
+    0 3px 10px rgba(100, 59, 185, 0.5);
+  transform: translateY(-3px);
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow:
+    0 4px 12px rgba(90, 103, 216, 0.5),
+    0 2px 6px rgba(100, 59, 185, 0.4);
+}
+
+/* Secciones ocultas */
+.hidden {
+  display: none !important;
+}
+
+/* Lista de estudiantes */
+#student-list {
+  margin-top: 15px;
+  text-align: left;
+  max-height: 280px;
+  overflow-y: auto;
+  border-top: 3px solid #667eea;
+  padding-top: 20px;
+  scrollbar-width: thin;
+  scrollbar-color: #667eea #e0e4ff;
+}
+
+.student {
+  background: #f0f4ff;
+  border-left: 6px solid #667eea;
+  padding: 16px 22px;
+  margin-bottom: 16px;
+  border-radius: 14px;
+  font-size: 16px;
+  color: #222;
+  box-shadow: 0 3px 8px rgba(102, 126, 234, 0.2);
+  transition: background 0.3s;
+  cursor: default;
+}
+
+.student:hover {
+  background: #dde4ff;
+}
+
+/* Scrollbar para Webkit */
+#student-list::-webkit-scrollbar {
+  width: 10px;
+}
+
+#student-list::-webkit-scrollbar-track {
+  background: #e0e4ff;
+  border-radius: 10px;
+}
+
+#student-list::-webkit-scrollbar-thumb {
+  background: #667eea;
+  border-radius: 10px;
+  border: 2px solid #e0e4ff;
+}
+
+/* Botón cerrar sesión */
+.cerrar-sesion-btn {
+  margin-top: 25px;
+  background: linear-gradient(135deg, #e53e3e, #c53030);
+  font-weight: 700;
+  font-size: 18px;
+  box-shadow:
+    0 6px 18px rgba(229, 62, 62, 0.5),
+    0 3px 10px rgba(197, 48, 48, 0.4);
+  transition:
+    background 0.4s ease,
+    box-shadow 0.3s ease,
+    transform 0.15s ease;
+}
+
+.cerrar-sesion-btn:hover {
+  background: linear-gradient(135deg, #c53030, #9b2424);
+  box-shadow:
+    0 8px 22px rgba(197, 48, 48, 0.7),
+    0 4px 15px rgba(155, 36, 36, 0.6);
+  transform: translateY(-3px);
+}
+
+/* Select rol */
+#role {
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+/* Mensajes de alerta personalizados */
+.alerta {
+  background: #ffe3e3;
+  color: #a30000;
+  border-radius: 12px;
+  padding: 12px 20px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(255, 99, 99, 0.3);
+  animation: fadeIn 0.4s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+/* Responsive */
+@media (max-width: 520px) {
+  .container {
+    padding: 30px 20px;
+    border-radius: 20px;
+  }
+  button {
+    font-size: 18px;
+    padding: 14px;
+  }
+  #student-list {
+    max-height: 220px;
+  }
+}

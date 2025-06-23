@@ -1,0 +1,349 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Learn English</title>
+  <link rel="stylesheet" href="stylelevels.css" />
+</head>
+<body>
+  <header>
+    <div class="logo-title">
+      <img src="logo.png" alt="Learn English Logo" />
+      <span role="img" aria-label="bee">🐝</span> B1+ LEVEL
+    </div>
+  </header>
+
+        <!-- B1+ TAB -->
+
+  <!-- Subtabs -->
+   <div id="subtabs-navigation" style="display: none;">
+        <nav class="subtabs" role="tablist">
+          <button class="subtab-button" onclick="openSubTab(event, 'b1plus-listening')" role="tab" aria-selected="true">Listening</button>
+          <button class="subtab-button" onclick="openSubTab(event, 'b1plus-grammar')" role="tab" aria-selected="false">Grammar</button>
+          <button class="subtab-button" onclick="openSubTab(event, 'b1plus-speaking')" role="tab" aria-selected="false">Speaking</button>
+          <button class="subtab-button" onclick="openSubTab(event, 'b1plus-reading')" role="tab" aria-selected="false">Reading</button>
+        </nav>
+</div>
+  <!-- Listening -->
+    <section id="b1plus-listening" class="subtab-content" style="display: block;">
+    <h3>🎧 Listening Practice</h3>
+          <ul class="topic-list">
+            <li><a href="#Useful Expressions">Useful Expressions</a></li>
+            <li><a href="#Technology">Technology</a></li>
+            <li><a href="#Travel & Culture">Travel & Culture</a></li>
+          </ul>
+
+          <section id="Useful Expressions" class="topic-section">
+            <h4>Useful Expressions</h4>
+            <ul>
+               <button onclick="leerFrase('To take into account')">To take into account</button>
+               <button onclick="leerFrase('To make up your mind')">To make up your mind</button>
+               <button onclick="leerFrase('To come up with')">To come up with</button>
+               <button onclick="leerFrase('To go the extra mile')">To go the extra mile</button>
+               <button onclick="leerFrase('To get the hang of')">To get the hang of</button>
+              <button onclick="leerFrase('To run out of')">To run out of</button>
+
+            </ul>
+          </section>
+
+          <section id="Technology" class="topic-section">
+            <h4>Technology</h4>
+            <ul>
+              <button onclick="leerFrase('User-friendly')">User-friendly</button>
+              <button onclick="leerFrase('Upgrade')">Upgrade</button>
+              <button onclick="leerFrase('Browse')">Browse</button>
+              <button onclick="leerFrase('Streaming')">Streaming</button>
+              <button onclick="leerFrase('Cybersecurity')">Cybersecurity</button>
+              <button onclick="leerFrase('Encryption')">Encryption</button>
+            </ul>
+          </section>
+
+          <section id="Travel & Culture" class="topic-section">
+            <h4>Travel & Culture</h4>
+            <ul>
+              <button onclick="leerFrase('Sightseeing')">Sightseeing</button>
+              <button onclick="leerFrase('Customs')">Customs</button>
+              <button onclick="leerFrase('Local cuisine')">Local cuisine</button>
+              <button onclick="leerFrase('Landmark')">Landmark</button>
+              <button onclick="leerFrase('Cultural immersion')">Cultural immersion</button>
+              <button onclick="leerFrase('Travel itinerary')">Travel itinerary</button>
+            </ul>
+          </section>
+           <div id="next-section-btn" style="text-align:right; margin-top:2rem;">
+          <button onclick="mostrarSiguienteSubtab()" style="font-size:1.2rem;">
+          ➡️ Next
+          </button>
+          </div>
+        </section> <!--END LISTENING B1+-->
+
+  <!-- Grammar B1+-->
+      <section id="b1plus-grammar" class="subtab-content" style="display: none;">
+        <h3>Grammar Practice</h3>
+        <div id="subtab-grammar">
+<!-- 1. DEDUCTION IN PRESENT -->
+<article class="activity-card">
+
+  <p><strong>1.Choose the correct sentence using a modal verb for deduction in the present</strong></p>
+  <button onclick="checkAnswer(this, true)">He must be tired after working all day.</button>
+  <button onclick="checkAnswer(this, false)">He must to be tired after working all day.</button>
+  <button onclick="checkAnswer(this, false)">He must being tired after working all day.</button>
+  <button onclick="checkAnswer(this, false)">He must have been tired after working all day.</button>
+  <p class="message-result"></p>
+  <button class="retry-btn" onclick="resetCard(this)" style="display:none; margin-top: 10px;">
+  🔄 Try again
+</button>
+</article>
+
+<!-- 2. WISH -->
+<article class="activity-card">
+  <p><strong>2.Which sentence uses the correct form of "wish"?.</strong></p>
+  <button onclick="checkAnswer(this, false)">I wish I have more free time.</button>
+  <button onclick="checkAnswer(this, true)">I wish I had more free time.</button>
+  <button onclick="checkAnswer(this, false)">I wish I will have more free time.</button>
+  <button onclick="checkAnswer(this, false)">I wish I would have more free time.</button>
+  <p class="message-result"></p>
+  <button class="retry-btn" onclick="resetCard(this)" style="display:none; margin-top: 10px;">
+  🔄 Try again
+</button>
+</article>
+
+<!--3.MODAL VERB-->
+<article class="activity-card">
+  <p><strong>3.Choose the correct sentence using a modal verb in the past: </strong></p>
+  <button onclick="checkAnswer(this, true)">She could have studied harder for the exam.</button>
+  <button onclick="checkAnswer(this, false)">She could study harder for the exam.</button>
+  <button onclick="checkAnswer(this, false)">She could studied harder for the exam.</button>
+  <button onclick="checkAnswer(this, false)">She could has studied harder for the exam.</button>
+  <p class="message-result"></p>
+  <button class="retry-btn" onclick="resetCard(this)" style="display:none; margin-top: 10px;">
+  🔄 Try again
+</button>
+</article>
+
+
+<!-- 4. PHRASAL VERB -->
+<article class="activity-card">
+  <p><strong>4. Which sentence uses the correct form of the phrasal verb?</strong></p>
+  <button onclick="checkAnswer(this, true)">He gave up smoking last year.</button>
+  <button onclick="checkAnswer(this, false)">He gave off smoking last year.</button>
+  <button onclick="checkAnswer(this, false)">He gave in smoking last year.</button>
+  <button onclick="checkAnswer(this, false)">He gave out smoking last year.</button>
+  <p class="message-result"></p>
+  <button class="retry-btn" onclick="resetCard(this)" style="display:none; margin-top: 10px;">
+  🔄 Try again
+</button>
+</article>
+
+<!-- 5. WOULD RATHER -->
+<article class="activity-card">
+  <p><strong>5. Choose the correct sentence using "would rather"</strong></p>
+  <button onclick="checkAnswer(this, false)">I would rather to stay home tonight.</button>
+  <button onclick="checkAnswer(this, true)">I would rather stay home tonight.</button>
+  <button onclick="checkAnswer(this, false)">I would rather staying home tonight.</button>
+  <button onclick="checkAnswer(this, false)">I would rather stayed home tonight.</button>
+  <p class="message-result"></p>
+    <button class="retry-btn" onclick="resetCard(this)" style="display:none; margin-top: 10px;">
+  🔄 Try again
+</button>
+</article>
+
+
+<!-- 6. PASSIVE VOICE -->
+<article class="activity-card">
+  <p><strong>6. Which sentence uses the correct form of the passive voice?</strong></p>
+  <button onclick="checkAnswer(this, true)">The cake was eaten by the children.</button>
+  <button onclick="checkAnswer(this, false)">The cake ate by the children.</button>
+  <button onclick="checkAnswer(this, false)">The cake is eating by the children.</button>
+    <button onclick="checkAnswer(this, false)">The cake has eaten by the children.</button>
+  <p class="message-result"></p>
+  <button class="retry-btn" onclick="resetCard(this)" style="display:none; margin-top: 10px;">
+  🔄 Try again
+</button>
+</article>
+
+<!-- 7. MIXED CONDTIIONAL -->
+<article class="activity-card">
+  <p><strong>7. Choose the correct sentence using a mixed conditional:</strong></p>
+  <button onclick="checkAnswer(this, false)">If I had studied harder, I would pass the exam.</button>
+  <button onclick="checkAnswer(this, false)">If I had studied harder, I would have passed the exam.</button>
+  <button onclick="checkAnswer(this, true)">If I had studied harder, I would be passing the exam now.</button>
+  <button onclick="checkAnswer(this, false)">If I studied harder, I would have passed the exam.</button>
+  <p class="message-result"></p>
+  <button class="retry-btn" onclick="resetCard(this)" style="display:none; margin-top: 10px;">
+  🔄 Try again
+</button>
+</article>
+
+<!-- 8. USED TO -->
+<article class="activity-card">
+  <p><strong>8. Which sentence uses the correct form of "used to"?</strong></p>
+  <button onclick="checkAnswer(this, true)">I used to play football when I was a child.</button>
+  <button onclick="checkAnswer(this, false)">I use to play football when I was a child.</button>
+  <button onclick="checkAnswer(this, false)">I am used to play football when I was a child.</button>
+  <button onclick="checkAnswer(this, false)">I was used to play football when I was a child.</button>
+  <p class="message-result"></p>
+  <button class="retry-btn" onclick="resetCard(this)" style="display:none; margin-top: 10px;">
+  🔄 Try again
+</button>
+</article>
+
+<!-- 9. CONNECTOR OF CONTRAST -->
+<article class="activity-card">
+  <p><strong>9. Choose the correct sentence using a connector of contrast</strong></p>
+  <button onclick="checkAnswer(this, false)">Despite it was raining, we went for a walk.</button>
+  <button onclick="checkAnswer(this, false)">Even it was raining, we went for a walk.</button>
+  <button onclick="checkAnswer(this, true)">Although it was raining, we went for a walk.</button>
+  <button onclick="checkAnswer(this, false)">However it was raining, we went for a walk.</button>
+  <p class="message-result"></p>
+  <button class="retry-btn" onclick="resetCard(this)" style="display:none; margin-top: 10px;">
+  🔄 Try again
+</button>
+</article>    
+
+<!-- 10. SO OR SUCH -->
+<article class="activity-card">
+  <p><strong>10. Which sentence uses the correct form of "so" or "such"?</strong></p>
+  <button onclick="checkAnswer(this, false)">It was so a beautiful day that we went to the park.</button>
+  <button onclick="checkAnswer(this, false)">It was such beautiful day that we went to the park.</button>
+  <button onclick="checkAnswer(this, false)">It was so beautiful day that we went to the park.</button>
+  <button onclick="checkAnswer(this, true)">It was such a beautiful day that we went to the park.</button>
+  <p class="message-result"></p>
+    <button class="retry-btn" onclick="resetCard(this)" style="display:none; margin-top: 10px;">
+  🔄 Try again
+</button>
+</article>
+ <div id="next-section-btn" style="text-align:right; margin-top:2rem;">
+          <button onclick="mostrarSiguienteSubtab()" style="font-size:1.2rem;">
+          ➡️ Next
+          </button>
+          </div>
+ <button class="btn-resultados" onclick="mostrarResultadoTotal()">
+  📊 Results
+</button>
+<p id="resultado-final"></p>
+</section><!---End grammar-->
+
+<!-- Speaking B1+-->
+<section id="b1plus-speaking" class="subtab-content" style="display: none;">
+  <h3>🗣️ Speaking Section</h3>
+  <div class="speaking-exercise">
+    
+    <!-- Tarjeta 1: Travel -->
+    <article class="activity-card" data-dialogos='[
+      { "pregunta": "Have you planned your travel itinerary yet?", "respuesta": "Yes! First, I’ll do some sightseeing around the city." },
+      { "pregunta": "That sounds great! Don’t forget to visit the main landmark", "respuesta": "Of course! Then, I want to try the local cuisine." },
+      { "pregunta": "Good idea! It’s a great way to experience the cultural side of the city.", "respuesta": "And at the airport, I’ll have to go through customs, right?" },
+      { "pregunta": "Yes, just make sure to have your passport ready!", "respuesta": "Oh yeah, I almost forgot it!" }
+    ]'>
+      <p>✈️ <strong>Topic:</strong> Exploring Culture Through Travel!</p>  
+      <p><strong>Say aloud:</strong> <span class="fraseObjetivo"></span></p>
+      <button class="speakBtn">🎤 Speak</button>
+      <button class="repeatPhraseBtn">🔊 Listen</button>
+      <p class="resultado"></p>
+      <p class="mensajeError error-message hidden">❌ Incorrect. Try again.</p>
+      <button class="retryBtn hidden">🔄 Retry</button>
+      <p class="message-result"></p>
+      <button class="nextBtn">➡️ Next</button>
+      <button class="repeatAnswerBtn hidden">🗣️ Listen</button>
+    </article>
+
+  <!-- Tarjeta 2: University -->
+<article class="activity-card" data-dialogos='[
+  { "pregunta": "I can’t make up my mind about which university to choose.", "respuesta": "Have you taken into account the tuition fees and location?" },
+  { "pregunta": "Yes, but I want a strong science program too.", "respuesta": "Then you should go the extra mile and visit the campuses." },
+  { "pregunta": "That’s true! I need to come up with a plan for the trip.", "respuesta": "And don’t worry, you’ll get the hang of everything once classes start!" },
+  { "pregunta": "I hope so! I just don’t want to run out of time to apply.", "respuesta": "Then make sure to submit your application early!" }
+]'>
+  <p>🏫 <strong>Topic:</strong> Choosing the Right Path!</p>  
+  <p><strong>Say aloud:</strong> <span class="fraseObjetivo"></span></p>
+  <button class="speakBtn">🎤 Speak</button>
+  <button class="repeatPhraseBtn">🔊 Listen</button>
+  <p class="resultado"></p>
+  <p class="mensajeError error-message hidden">❌ Incorrect. Try again.</p>
+  <button class="retryBtn hidden">🔄 Retry</button>
+  <p class="message-result"></p>
+  <button class="nextBtn">➡️ Next</button>
+  <button class="repeatAnswerBtn hidden">🗣️ Listen</button>
+</article>
+  </div>
+   <div id="next-section-btn" style="text-align:right; margin-top:2rem;">
+          <button onclick="mostrarSiguienteSubtab()" style="font-size:1.2rem;">
+          ➡️ Next
+          </button>
+          </div>
+</section> <!-----End Speaking B1+-->
+
+
+  <!-- Reading B1+-->
+        <section id="b1plus-reading" class="subtab-content" style="display: none;">
+         <article class="activity-card">
+            <h3>📖 Reading Section</h3>
+            <h4>A Day in London</h4>
+            <p>Sam arrived in London early in the morning. His first stop was Big Ben, one of the most famous landmarks in the city. He took pictures and admired the historic architecture.</p>
+            <p>Next, he decided to explore Covent Garden, where he watched street performers and visited local shops. He bought a travel guide to learn more about the city's history.</p>
+            <p>For lunch, Sam tried fish and chips, a traditional British dish. He loved the crispy fish and warm fries!</p>
+            <p>Before heading back to his hotel, he took a boat ride along the River Thames, enjoying the beautiful city views.</p>
+            <p>Sam had an amazing day and promised to come back soon!</p>
+            <button onclick="speakReadingText(this)">🔊 Read aloud</button>
+           <button class="stop-btn" style="display: none;" onclick="stopReading(this)">⏹️ Stop</button>
+
+
+            <p><strong>What did Sam buy in Covent Garden?</strong></p>
+            <button onclick="checkReadingAnswer(this, false)">A TS-themed T-shirt</button>
+            <button onclick="checkReadingAnswer(this, true)">A travel guide</button>
+            <button onclick="checkReadingAnswer(this, false)">A box of chocolates</button>
+            <p class="message-result"></p>
+            <button class="retry-btn" onclick="resetCard(this)" style="display: none;">🔄 Try Again</button>
+          </article>
+
+          <article class="activity-card">
+            <h4>The Lost Passport</h4>
+           <p>Mia was ready for her trip to Italy. She packed her luggage, checked her ticket, and left for the airport. When she reached customs, she realized something terrible—her passport was missing!</p>
+           <p>She searched her travel bag but couldn't find it. Panicked, she called her brother. "Check my desk!" she said. A minute later, her brother replied, "I found it!"</p>
+           <p>Mia rushed home, grabbed the passport, and hurried back. She arrived just in time for boarding. Exhausted but relieved, she smiled. The adventure was about to begin! </p>
+            <button onclick="speakReadingText(this)">🔊 Read aloud</button>
+           <button class="stop-btn" style="display: none;" onclick="stopReading(this)">⏹️ Stop</button>
+
+
+            <p><strong>Where was Mia's passport?</strong></p>
+            <button onclick="checkReadingAnswer(this, false)">In her suitcase</button>
+            <button onclick="checkReadingAnswer(this, false)">At the airport</button>
+            <button onclick="checkReadingAnswer(this, true)">In her desk</button>
+            <p class="message-result"></p>
+            <button class="retry-btn" onclick="resetCard(this)" style="display: none;">🔄 Try Again</button>
+          </article>
+
+          <article class="activity-card">
+            <h4>A New Friendship</h4>
+            <p>Vale had just moved to a new neighborhood. At first, she felt lonely. One day, her neighbor, Brillo, invited her for coffee. They talked about their hobbies and favorite movies.</p>
+            <p>Soon, they started meeting every weekend. Brillo introduced Vale to his friends, and they all got along well. After a few months, Vale felt at home.</p>
+            <p>One day, Brillo said, "I'm glad we're friends. Moving to a new place can be hard." Vale smiled. "Yes, but thanks to you, it was much easier!" </p>
+            <button onclick="speakReadingText(this)">🔊 Read aloud</button>
+            <button class="stop-btn" style="display: none;" onclick="stopReading(this)">⏹️ Stop</button>
+
+
+            <p><strong>How did Vale feel at first?</strong></p>
+            <button onclick="checkReadingAnswer(this, false)">Excited</button>
+            <button onclick="checkReadingAnswer(this, true)">Lonely</button>
+            <button onclick="checkReadingAnswer(this, false)">Confident</button>
+            <p class="message-result"></p>
+            <button class="retry-btn" onclick="resetCard(this)" style="display: none;">🔄 Try Again</button>
+          </article>
+
+        </section> <!----End Reading B1-->  
+        
+</section> <!---End B1+-->
+      </section>
+    </main>
+  </div>
+
+<audio id="audio-good-job" src="Great progress.mp3" preload="auto"></audio>
+
+  <footer>
+  <h5>&copy; Mahanaym 2025 By Elizabeth Román</h5>
+</footer>
+
+  <script src="scriptlevels.js"></script>
+</body>
+</html>
